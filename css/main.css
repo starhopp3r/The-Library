@@ -1,0 +1,284 @@
+/* 
+Basic Color Scheme
+------------------
+ColorHunt: https://colorhunt.co/palette/faf7f0d8d2c2b174574a4947
+
+#FAF7F0 - Background and places where light colored text is needed
+#D8D2C2 - Colored divs, panels, etc.
+#B17457 - Headings, bold text, used for emphasis.
+#4A4947 - Nav bar, footer and genetic text.
+*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #4A4947;
+    background: #FAF7F0;
+}
+
+header {
+    z-index: 2;
+    padding: 0.5rem 3rem 0.5rem 2rem;
+    color: #FAF7F0;
+    background-color: #4A4947;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.home-nav-link {
+    color: #FAF7F0;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #FAF7F0;
+    text-decoration: none;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.nav-links li a:hover {
+    color: #B17457;
+}
+
+
+main {
+    flex: 1;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #B17457
+}
+
+footer {
+    background-color: #4A4947;
+    color: #FAF7F0;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.carousel-container {
+    max-width: 100%;
+    max-height: 400px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.carousel-slide::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
+}
+
+.carousel-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.grid-container {
+    display: grid;
+    row-gap: 50px;
+    padding: 10px 0px 0px 0px;
+    column-gap: calc((100% - (190px * 5)) / 4); /* adjust for 5 items of 190px width */
+    grid-template-columns: repeat(5, 190px); /* fixed width for grid items */
+}
+
+.grid-item:last-child {
+    grid-column-end: span 1; /* This won’t modify the gap, but keeps grid alignment */
+}
+
+
+.grid-img {
+    height: 300px;
+    width: 190px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.grid-img:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#aboutimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#contactcolumn {
+    width: fit-content;
+    text-align: left;
+    padding: 20px 20px 20px 0px;
+}
+
+#formcolumn {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    padding: 20px;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 150px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="Password"] {
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="Password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#button1 {
+    margin-top: 20px;
+}
+
+#button1 input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#button1 input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+.popup-position {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#popup-wrapper{
+    width:500px;
+    margin: 70px auto;
+    text-align: left;
+}
+
+#popup-container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
