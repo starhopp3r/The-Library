@@ -1,0 +1,1031 @@
+/* 
+Basic Color Scheme
+------------------
+ColorHunt: https://colorhunt.co/palette/faf7f0d8d2c2b174574a4947
+
+#FAF7F0 - Background and places where light colored text is needed
+#D8D2C2 - Colored divs, panels, etc.
+#B17457 - Headings, bold text, used for emphasis.
+#4A4947 - Nav bar, footer and genetic text.
+*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #4A4947;
+    background: #FAF7F0;
+}
+
+header {
+    z-index: 2;
+    padding: 0.5rem 3rem 0.5rem 2rem;
+    color: #FAF7F0;
+    background-color: #4A4947;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.home-nav-link {
+    color: #FAF7F0;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #FAF7F0;
+    text-decoration: none;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.nav-links li a:hover {
+    color: #B17457;
+}
+
+
+main {
+    flex: 1;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #B17457
+}
+
+footer {
+    background-color: #4A4947;
+    color: #FAF7F0;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.carousel-container {
+    max-width: 100%;
+    max-height: 400px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.carousel-slide::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; 
+}
+
+.carousel-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/*
+.active, .dot:hover {
+    background-color: #717171;
+}
+*/
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.grid-container {
+    display: grid;
+    row-gap: 50px;
+    padding: 10px 0px 0px 0px;
+    column-gap: calc((100% - (190px * 5)) / 4);
+    grid-template-columns: repeat(5, 190px);
+}
+
+.grid-item:last-child {
+    grid-column-end: span 1; 
+}
+
+.grid-img {
+    height: 300px;
+    width: 190px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.grid-img:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#aboutimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#contactcolumn {
+    width: fit-content;
+    text-align: left;
+    padding: 20px 20px 20px 0px;
+}
+
+#formcolumn {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    padding: 20px;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 150px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="Password"] {
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="Password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#button1 {
+    margin-top: 20px;
+}
+
+#button1 input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#button1 input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+.popup-position {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#popup-wrapper{
+    width:500px;
+    margin: 70px auto;
+    text-align: left;
+}
+
+#popup-container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.error-message {
+    background-color: #ffe6e6;
+    border: 1px solid #ff9999;
+    color: #cc0000;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.success-message {
+    background-color: #e6ffe6;
+    border: 1px solid #99ff99;
+    color: #006600;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.form-container {
+    max-width: 400px; 
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #D8D2C2;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #B17457;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #95614A;
+}
+
+.contact-intro {
+    text-align: center;
+    color: #4A4947;
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 0.75rem;
+    border: 1px solid #D8D2C2;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #B17457;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #95614A;
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-footer a {
+    color: #B17457;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #FAF7F0;
+    border-bottom: 1px solid #D8D2C2;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #95614A;
+}
+
+.welcome-text {
+    color: #FAF7F0;
+    font-weight: 500;
+}
+
+.dashboard-content {
+    padding: 1rem;
+    background-color: #FAF7F0;
+    border-radius: 4px;
+}
+
+.form-container.dashboard {
+    max-width: 800px;
+}
+
+.nav-links {
+    gap: 1.5rem;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-link {
+    padding: 0.4rem 0.8rem;
+    background-color: #B17457;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #95614A;
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #4A4947;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dashboard-card h3 {
+    color: #B17457;
+    margin: 0 0 0.5rem 0;
+}
+
+.dashboard-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.recommendations {
+    margin: 2rem 0;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.book-card {
+    display: flex;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card h4 {
+    color: #B17457;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.book-author {
+    color: #4A4947;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.book-genre {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    padding: 0.2rem 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    display: inline-block;  
+    width: fit-content;    
+}
+
+.book-description {
+    color: #4A4947;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.btn-book {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #95614A;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #95614A;
+}
+
+.recommendations {
+    margin: 1rem 0;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.book-card {
+    display: flex;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.book-image {
+    width: 120px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.book-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.book-info h4 {
+    color: #B17457;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.book-author {
+    color: #4A4947;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.book-genre {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    padding: 0.2rem 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.book-description {
+    color: #4A4947;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    max-height: none;
+    overflow: visible; /
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logout-link {
+    padding: 0.4rem 0.8rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #95614A;
+}
+
+.search-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #FAF7F0;
+    border-radius: 8px;
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-form select {
+    padding: 0.5rem;
+    border: 1px solid #D8D2C2;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #D8D2C2;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-search {
+    padding: 0.5rem 1rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #95614A;
+}
+
+.book-header {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.book-checkbox {
+    margin-top: 0.3rem;
+    transform: scale(1.2);
+}
+
+.book-status {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.book-status.available {
+    color: #28a745;
+}
+
+.book-status.on.loan {
+    color: #dc3545;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.page-link {
+    padding: 0.5rem 1rem;
+    background-color: #FAF7F0;
+    color: #4A4947;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #D8D2C2;
+}
+
+.page-link.active {
+    background-color: #B17457;
+    color: #FAF7F0;
+}
+
+.checkout-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-checkout {
+    padding: 0.75rem 2rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-checkout:hover {
+    background-color: #95614A;
+}
+
+.btn-add-to-cart {
+    padding: 0.5rem 1rem;
+    background-color: #B17457;
+    color: #FAF7F0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #95614A;
+}
+
+.add-to-cart-form {
+    margin-top: auto;
+    width: fit-content; 
+}
+
+.book-card {
+    display: flex;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+.cart-item .book-image {
+    width: 80px;
+    margin-right: 1rem;
+}
+
+.cart-item .book-image img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item .book-info {
+    flex: 1;
+}
+
+.cart-item .book-info h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.btn-remove {
+    padding: 0.4rem 0.8rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 2rem;
+}
+
+.empty-cart a {
+    color: #B17457;
+    text-decoration: none;
+}
+
+.empty-cart a:hover {
+    text-decoration: underline;
+}
+
+.cart-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #FAF7F0;
+}
+
+.admin-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.btn-admin {
+    padding: 0.75rem 1.5rem;
+    background-color: #B17457;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-admin:hover {
+    background-color: #95614A;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #f5f5f5;
+    font-weight: 500;
+}
+
+.btn-delete {
+    padding: 0.4rem 0.8rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.success-message,
+.error-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Book action buttons */
+.book-action-form {
+    margin: 0;
+}
+
+.btn-return {
+    padding: 0.4rem 0.8rem;
+    background-color: #28a745;  /* Green color for return button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-return:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    padding: 0.4rem 0.8rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}

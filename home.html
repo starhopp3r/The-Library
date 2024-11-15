@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Set viewport for consistent view-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load Poppins font from Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Main stylesheet for the website -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Main JavaScript for the website-->
+    <script src="js/main.js"></script>
+    <!-- Title of the website -->
+    <title>The Library - Home</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar of the website -->
+        <nav>
+            <div class="logo">The Library</div>
+            <!-- Navigation links -->
+            <ul class="nav-links">
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Page content goes here -->
+        <h1>Latest Events</h1>
+        <!-- Image carousel -->
+        <div class="carousel-container">
+            <div class="carousel-slide fade">
+                <img src="media/img/lib1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-slide fade">
+                <img src="media/img/lib2.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-slide fade">
+                <img src="media/img/lib1.jpg" alt="Image 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- New Arrivals section -->
+        <h1>New Arrivals</h1>
+        <!-- 3 x 3 Image Grid of Book Covers -->
+        <div class="grid-container">
+            <div class="grid-item">
+                <img class="grid-img" src="media/img/9780141439518.jpg" alt="Image 1">
+            </div>
+            <div class="grid-item">
+                <img class="grid-img" src="media/img/9780316769488.jpg" alt="Image 2">
+            </div>
+            <div class="grid-item">
+                <img class="grid-img" src="media/img/9780547928227.jpg" alt="Image 3">
+            </div>  
+            <div class="grid-item">
+                <img class="grid-img" src="media/img/9780451524935.jpg" alt="Image 4">
+            </div>
+            <div class="grid-item">
+                <img class="grid-img" src="media/img/9780743273565.jpg" alt="Image 5">
+            </div>
+        </div>
+    </main>
+    <!-- Footer of the website -->
+    <footer>
+        <p>&copy; 2024 The Library. All rights reserved.</p>
+    </footer>
+</body>
+</html>
